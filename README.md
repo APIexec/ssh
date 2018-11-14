@@ -84,6 +84,38 @@ Struktura:
         
        
         
+## EXAMPLES
+How to use it by practice examples, e.g. testing, for people and automatisation:
+
+I welcome any contributions, enhancements, and bug-fixes. File an issue on GitHub and submit a pull request.
+Building/Testing
+
+To build/test the project locally on your computer:
+
+    Clone this repo
+    git clone https://github.com/APIDevTools/swagger-cli.git
+
+    Install dependencies
+    npm install
+
+    Run the tests
+    npm test
+
+### Should by possible to scan it and convert to the script, over the config
+
+    input:
+        file:
+            url: https://github.com/APIDevTools/swagger-cli
+    
+    process:
+        parsing: name
+    
+    output:
+        file:
+            mime-type: "json"             
+            path: "/example.json" 
+        
+        
 ## DESCRIPTION
 
 ### ssh (SSH client)
