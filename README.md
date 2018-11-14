@@ -8,6 +8,24 @@ If you need direct access to the device's shell, I need a layer of abstraction, 
 ## Goal
 Create a REST API with strong authentication and let Clients execute commands through it, or should I develop something on top of SSH. The goal is to let remote Clients execute certain commands on the devices safely. And wasn't SSH made for this reason? However, the clients must not see a remote shell on their smartphones, but a nice GUI
 
+## Credentials
+
+How to store the secret data?
+You should probably know about KeePass as a tool to manage your passwords or other secrets in an encrypted file. 
+Since the default tool to edit and view your passwords is based on .NET you might not be able to use your keys everytime you need them due to missing libraries 
+or a wrong platform (Mono needs to be installed on Linux systems).
+
+
+### [keepass.io](https://libraries.io/npm/keepass.io)
+
+Node.js library for reading and writing KeePass databases 
+Install
+    
+    npm install keepass.io@1.1.4 
+    
+### KdbxWeb Build status
+https://github.com/keeweb/kdbxweb
+KdbxWeb is a high-performance javascript library for reading/writing KeePass v2 databases (kdbx) in node.js or browser.
 
 # Service
 sluzy do komunikacji z serwerem
