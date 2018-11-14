@@ -5,16 +5,21 @@ Tool for connection to server and execute command from json/yaml data format in 
 
 If you need direct access to the device's shell, I need a layer of abstraction, provided by an API running on the IoT device. 
 
+## API-SWAGGER SSH
+How to implement from ready, import if exist similary project
+
 ## Goal
 Create a REST API with strong authentication and let Clients execute commands through it, or should I develop something on top of SSH. The goal is to let remote Clients execute certain commands on the devices safely. And wasn't SSH made for this reason? However, the clients must not see a remote shell on their smartphones, but a nice GUI
 
 ## Credentials
 
-How to store the secret data?
+### How to store the secret data?
+
 You should probably know about KeePass as a tool to manage your passwords or other secrets in an encrypted file. 
 Since the default tool to edit and view your passwords is based on .NET you might not be able to use your keys everytime you need them due to missing libraries 
 or a wrong platform (Mono needs to be installed on Linux systems).
 
+### How to connect SSH and Keepass 
 
 ### [keepass.io](https://libraries.io/npm/keepass.io)
 
@@ -26,6 +31,9 @@ Install
 ### KdbxWeb Build status
 https://github.com/keeweb/kdbxweb
 KdbxWeb is a high-performance javascript library for reading/writing KeePass v2 databases (kdbx) in node.js or browser.
+
+#### More ..
+https://www.npmjs.com/search?q=keywords:keepass
 
 # Service
 sluzy do komunikacji z serwerem
