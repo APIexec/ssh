@@ -1,0 +1,30 @@
+{
+  "info": {
+    "version": "1.0.0",
+    "schema": "url",
+    "description": "Update domain after remove the domain from Plesk panel, now is some bug with SSL",
+    "keywords": "plesk, repair domain, linux",
+    "author": [
+      "Tom"
+    ]
+  },
+  "target": "plesk1- optional, defined only one server/ip",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9"
+  },
+  "command": [
+    "ls /etc/apache2/plesk.conf.d/webmails/",
+    "rm /etc/apache2/plesk.conf.d/webmails/{domain}_webmail.conf",
+    "rm /etc/apache2/plesk.conf.d/webmails/{domain}_webmail.conf",
+    "rm /etc/apache2/plesk.conf.d/vhosts/{domain}.conf",
+    "rm /etc/nginx/plesk.conf.d/vhosts/{domain}.conf",
+    "plesk repair web {domain} -y"
+  ],
+  "variable": {
+    "domain": [
+      "domain1.com",
+      "domain2.com"
+    ]
+  }
+}
